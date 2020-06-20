@@ -40,15 +40,12 @@ deployment.
 ### Creating a service for the Deployment created in previous step
 * kubectl expose deployment kube-demo --target-port=8080 --type=NodePort
 
-* minikube service kube-demo --url
-output: 
+* minikube service kube-demo --url 
 ```http://172.17.0.41:32492```
 
 ### Testing minikube deployment
 * curl http://172.17.0.41:32492/employees/
-output:
 ```[{"id":1,"firstName":"Pradeep","lastName":"Singh","emailId":"Pradeep.Singh2@gmail.com"},{"id":2,"firstName":"Anand","lastName":"Zaveri","emailId":"Anand.Zaveri@gmail.com"},{"id":3,"firstName":"Akhilesh","lastName":"Juyal","emailId":"Akhilesh.Juyal@gmail.com"},{"id":4,"firstName":"Vaibhav","lastName":"Jha","emailId":"Vaibhav.Jha@outlook.com"},{"id":5,"firstName":"Himanshu","lastName":"Sharma","emailId":"Himanshu.Sharma@yahoo.com"},{"id":6,"firstName":"Jignesh","lastName":"Mehta","emailId":"Jignesh.Mehta@outlook.com"}]```
 
 * curl http://172.17..0.41:32492/employees/2
-output:
 ```{"id":2,"firstName":"Anand","lastName":"Zaveri","emailId":"Anand.Zaveri@gmail.com"}```
