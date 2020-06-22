@@ -38,9 +38,10 @@ The above command will use the tag kube-demo1 from the repository docker-labs at
 deployment.
 
 ### Creating a service for the Deployment created in previous step
-* kubectl expose deployment kube-demo --target-port=8080 --type=NodePort
+* kubectl expose pod kube-demo --target-port=8080 --type=NodePort
 
-* minikube service kube-demo --url 
+* minikube service kube-demo --url will output the url to query
+for eg:
 ```http://172.17.0.41:32492```
 
 ### Testing minikube deployment
