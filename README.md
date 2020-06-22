@@ -66,7 +66,7 @@ controlplane   Ready    master   5m35s   v1.18.0   172.17.0.40   <none>        U
 node01         Ready    <none>   4m54s   v1.18.0   **172.17.0.41**   <none>        Ubuntu 18.04.4 LTS   4.15.0-101-generic   docker://19.3.6
 ```
 
-* With this you can create your application url as below with http://node01_:nodeport_of_k8s-demo_pod/employees 
+* With this you can create your application url as below with ```http://<node01_ip>:<nodeport_of_k8s-demo_pod>/employees ```
 
 ### Testing minikube deployment
 * curl http://172.17.0.41:32492/employees/
