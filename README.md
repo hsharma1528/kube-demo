@@ -51,12 +51,14 @@ for eg:
 * kubectl get service -o wide (note down the nodeport like 31649 below) 
 
 kubectl get service -o wide #List servies
+
 NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE    SELECTOR
 kube-demo    NodePort    10.100.56.30   <none>        8080:31649/TCP   46s    run=kube-demo
 kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP          3m6s   <none>
 
 
 * kubectl  get nodes -o wide #grab the worker node ip address below eg 172.17.0.93 as pods are intelligently placed only on worker/slave  nodes (with ROLES as not maseter)
+
 NAME           STATUS   ROLES    AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
 controlplane   Ready    master   5m35s   v1.18.0   172.17.0.40   <none>        Ubuntu 18.04.4 LTS   4.15.0-101-generic   docker://19.3.6
 node01         Ready    <none>   4m54s   v1.18.0   172.17.0.41   <none>        Ubuntu 18.04.4 LTS   4.15.0-101-generic   docker://19.3.6
