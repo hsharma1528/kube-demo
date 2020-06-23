@@ -35,6 +35,7 @@
 
 ### Creating a Deployment using an existing Docker image
 * kubectl run kube-demo --image=azaveri7/docker-labs:kube-demo1 --port=8080
+* kubectl create deployment kubedemo --image=azaveri7/docker-labs:kube-demo1
 
 The above command will use the tag kube-demo1 from the repository docker-labs at
 deployment.
